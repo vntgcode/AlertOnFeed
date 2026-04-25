@@ -1,9 +1,6 @@
-
 # AlertOnFeed
 
-AlertOnFeed is a FreshRss plugin that sends alerts via pushover when a selected feed receives an update.
-
-
+AlertOnFeed is a FreshRSS plugin that sends alerts via pushover when a selected feed receives an update.
 
 
 ## Features
@@ -18,7 +15,6 @@ AlertOnFeed is a FreshRss plugin that sends alerts via pushover when a selected 
 2. Extract and upload it to the ./extensions folder of your FreshRSS installation
 
 
-
 ## Setup
 
 1. Go to configure -> extensions in FreshRSS
@@ -29,3 +25,6 @@ AlertOnFeed is a FreshRss plugin that sends alerts via pushover when a selected 
 6. Set your pushover API Token
 7. Choose whether to get alerted on read articles
 8. Click Save
+
+
+<!-- ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1") -->
