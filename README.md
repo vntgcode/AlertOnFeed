@@ -29,4 +29,4 @@ AlertOnFeed is a FreshRSS plugin that sends alerts via pushover when a selected 
 
 ### Configuration screenshot
 
-![alt text](blob:https://raw.githubusercontent.com/vntgcode/AlertOnFeed/refs/heads/main/screenshot_configuration.png "AlertOnFeed Configuration")
+![alt text](https://raw.githubusercontent.com/vntgcode/AlertOnFeed/refs/heads/main/screenshot_configuration.png "AlertOnFeed Configuration")
