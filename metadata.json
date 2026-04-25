@@ -1,0 +1,8 @@
+{
+    "name": "AlertOnFeed",
+    "author": "Vntgcode",
+    "description": "Get notifications for selected RSS feeds and send alerts via Pushover.",
+    "version": "0.1.0",
+    "entrypoint": "alertonfeed",
+    "type": "user"
+}
