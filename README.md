@@ -27,4 +27,6 @@ AlertOnFeed is a FreshRSS plugin that sends alerts via pushover when a selected 
 8. Click Save
 
 
-<!-- ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1") -->
+### Configuration screenshot
+
+![alt text](blob:https://raw.githubusercontent.com/vntgcode/AlertOnFeed/refs/heads/main/screenshot_configuration.png "AlertOnFeed Configuration")
