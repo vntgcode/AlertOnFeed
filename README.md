@@ -2,8 +2,8 @@
 
 AlertOnFeed is a FreshRSS plugin that sends alerts via pushover when a selected feed receives an update.
 
-[!NOTE]
- This plugin was built against FreshRSS edge (1.28.2-dev) and may not be compatible with older releases due to changes in the way user configuration values are stored and retrieved.
+> [!NOTE]
+> This plugin was built against FreshRSS edge (1.28.2-dev) and may not be compatible with older releases due to changes in the way user configuration values are stored and retrieved.
 
 ## Features
 
