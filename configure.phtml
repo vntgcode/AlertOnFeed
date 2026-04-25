@@ -1,0 +1,52 @@
+<?php
+	declare(strict_types=1);
+	/** @var AlertOnFeedExtension $this */
+?>
+
+<h2>AlertOnFeed Configuration</h2>
+<form action="<?= _url('extension', 'configure', 'e', urlencode($this->getName())) ?>" method="post">
+    <input type="hidden" name="_csrf" value="<?= FreshRSS_Auth::csrfToken() ?>" />
+    
+    <label for="feeds">Select feeds to alert on (hold Ctrl/Cmd to select multiple):</label><br>
+    
+    <select id="feeds" name="feeds[]" multiple size="10">
+        <?php foreach ($this->getUserFeeds() as $feed): ?>
+            <option value="<?= $feed->id()?>" 
+                    <?= in_array($feed->id(), $this->getSelectedFeeds(), true) ? 'selected' : '' ?>>
+                <?= htmlspecialchars($feed->name(), ENT_QUOTES, 'UTF-8') ?>
+            </option>
+        <?php endforeach; ?>
+
+    </select>
+        <br>
+        <br>
+    <label for="pushover_user">Pushover User Key:</label>
+        <br>
+    <input type="text" id="pushover_user" name="pushover_user" value="<?= htmlspecialchars($this->getPushoverUser(), ENT_QUOTES, 'UTF-8') ?>" size="40">
+        <br><br>
+    <label for="pushover_token">Pushover API Token:</label>
+        <br>
+    <input type="text" id="pushover_token" name="pushover_token" value="<?= htmlspecialchars($this->getPushoverToken(), ENT_QUOTES, 'UTF-8') ?>" size="40">
+        <br><br>
+
+    <label for="ignore_read_articles" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+        <input
+            type="checkbox"
+            id="ignore_read_articles"
+            name="ignore_read_articles"
+            value="1"
+            <?= $this->getIgnoreReadArticles() ? 'checked' : '' ?>
+        >
+        <strong>Ignore read articles</strong>
+    </label>
+    <p>
+        When enabled, AlertOnFeed checks each entry after FreshRSS applies its read/unread state and skips read articles.
+    </p>
+    <input type="submit" value="Save">
+</form><br>
+
+<form action="<?= _url('extension', 'configure', 'e', urlencode($this->getName())) ?>" method="post">
+    <input type="hidden" name="_csrf" value="<?= FreshRSS_Auth::csrfToken() ?>" />
+    <input type="hidden" name="send_test" value="1">
+    <input type="submit" value="Send Test Pushover Message">
+</form>
